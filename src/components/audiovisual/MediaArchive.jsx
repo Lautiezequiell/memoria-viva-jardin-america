@@ -14,7 +14,7 @@ const categoryIcons = {
 const MediaArchive = () => {
   const [activeCategory, setActiveCategory] = useState('documentales');
   const [selectedVideo, setSelectedVideo] = useState(null);
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [, setIsPlaying] = useState(false);
 
   const currentData = mediaData[activeCategory] || [];
 

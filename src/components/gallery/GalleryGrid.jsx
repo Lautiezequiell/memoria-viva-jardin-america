@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaSearch, FaFilter, FaTimes, FaDownload, FaExpand, FaImages } from 'react-icons/fa';
+import { FaSearch, FaFilter, FaTimes, FaDownload, FaImages } from 'react-icons/fa';
 import photosData, { filterOptions } from '../../data/photosData';
 
 const GalleryGrid = () => {
