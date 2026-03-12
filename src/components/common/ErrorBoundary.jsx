@@ -11,7 +11,7 @@ class ErrorBoundary extends Component {
     return { hasError: true, error };
   }
 
-  componentDidCatch(error, errorInfo) {
+  componentDidCatch(_error, _errorInfo) {
     // Error captured - no console logging in production
   }
 
