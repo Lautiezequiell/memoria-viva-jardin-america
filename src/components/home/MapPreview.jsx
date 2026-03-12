@@ -1,0 +1,127 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { FaArrowRight, FaMapMarkedAlt } from 'react-icons/fa';
+import placesData from '../../data/placesData';
+
+const MapPreview = () => {
+  const featuredPlaces = placesData.slice(0, 3);
+
+  return (
+    <section className="py-20 bg-stone-100">
+      <div className="container-custom">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="flex flex-col md:flex-row md:items-end md:justify-between mb-12"
+        >
+          <div>
+            <div className="inline-flex items-center gap-2 bg-earth-100 text-earth-900 px-4 py-2 rounded-full mb-4">
+              <FaMapMarkedAlt />
+              <span className="font-medium">Mapa Histórico</span>
+            </div>
+            <h2 className="heading-md text-earth-900">Descubrí los lugares con historia</h2>
+          </div>
+          <Link
+            to="/mapa"
+            className="mt-4 md:mt-0 inline-flex items-center gap-2 text-earth-700 hover:text-earth-900 transition-colors font-medium"
+          >
+            Explorar mapa completo <FaArrowRight />
+          </Link>
+        </motion.div>
+
+        <div className="grid md:grid-cols-3 gap-6">
+          {featuredPlaces.map((place, index) => (
+            <motion.div
+              key={place.id}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
+              <Link to="/mapa" className="group block">
+                <div className="card bg-white">
+                  <div className="relative aspect-[16/10] overflow-hidden">
+                    <img
+                      src={place.media.photos[0]}
+                      alt={place.name}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div className="absolute top-4 left-4">
+                      <span className="px-3 py-1 bg-white/90 backdrop-blur-sm text-earth-800 rounded-full text-sm font-medium capitalize">
+                        {place.category}
+                      </span>
+                    </div>
+                  </div>
+                  <div className="p-6">
+                    <h3 className="font-heading text-xl font-bold text-gray-900 mb-2">
+                      {place.name}
+                    </h3>
+                    <p className="text-gray-600 text-sm line-clamp-2 mb-4">
+                      {place.description}
+                    </p>
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm text-gray-500">
+                        {place.timeline.length} épocas documentadas
+                      </span>
+                      <span className="text-primary-600 font-medium text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
+                        Ver lugar <FaArrowRight />
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Map Preview Image */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="mt-12"
+        >
+          <Link to="/mapa" className="group block relative rounded-2xl overflow-hidden">
+            <div className="aspect-[21/9] bg-gradient-to-br from-primary-100 to-earth-100 relative">
+              {/* Mock Map Visualization */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="relative w-full h-full max-w-4xl mx-auto p-8">
+                  {/* Map pins mock */}
+                  {placesData.slice(0, 5).map((place, idx) => (
+                    <div
+                      key={place.id}
+                      className="absolute w-8 h-8 bg-primary-600 rounded-full border-4 border-white shadow-lg flex items-center justify-center text-white text-xs font-bold animate-pulse"
+                      style={{
+                        left: `${20 + idx * 15}%`,
+                        top: `${30 + (idx % 2) * 20}%`,
+                        animationDelay: `${idx * 0.2}s`,
+                      }}
+                    >
+                      {idx + 1}
+                    </div>
+                  ))}
+                  <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg shadow-md">
+                    <p className="text-sm font-medium text-gray-700">
+                      {placesData.length} lugares históricos
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors flex items-center justify-center">
+                <span className="px-6 py-3 bg-white text-gray-900 rounded-full font-medium shadow-lg transform group-hover:scale-105 transition-transform">
+                  Ver mapa interactivo
+                </span>
+              </div>
+            </div>
+          </Link>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
+export default MapPreview;

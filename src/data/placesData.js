@@ -1,0 +1,115 @@
+const placesData = [
+  {
+    id: 'place-001',
+    name: 'Plaza San Martín',
+    category: 'plaza',
+    description: 'Corazón cívico de Jardín América desde 1945',
+    history: 'La plaza fue diseñada como centro de reunión desde la fundación del pueblo.',
+    location: { lat: -27.0455, lng: -55.2275 },
+    address: 'Av. San Martín y Calle 9 de Julio',
+    media: {
+      photos: [
+        '/assets/images/places/plaza-1945.jpg',
+        '/assets/images/places/plaza-1970.jpg',
+        '/assets/images/places/plaza-2020.jpg',
+      ],
+      videos: [],
+      audios: ['/assets/audio/plaza-testimonio.mp3'],
+    },
+    timeline: ['1945', '1960', '1980', '2020'],
+    active: true,
+    features: ['Monumento', 'Fuentes', 'Juegos infantiles'],
+  },
+  {
+    id: 'place-002',
+    name: 'Escuela N° 12 "Domingo Faustino Sarmiento"',
+    category: 'escuela',
+    description: 'Primera escuela del pueblo, fundada en 1945',
+    history: 'Inició con dos aulas de madera y hoy cuenta con más de 500 alumnos.',
+    location: { lat: -27.046, lng: -55.228 },
+    address: 'Calle Belgrano 450',
+    media: {
+      photos: [
+        '/assets/images/places/escuela-1945.jpg',
+        '/assets/images/places/escuela-2020.jpg',
+      ],
+      videos: ['/assets/video/escuela-historia.mp4'],
+      audios: [],
+    },
+    timeline: ['1945', '1960', '1985', '2010'],
+    active: true,
+    features: ['Edificio histórico', 'Biblioteca', 'Patio de cámara'],
+  },
+  {
+    id: 'place-003',
+    name: 'Club Social y Deportivo',
+    category: 'club',
+    description: 'Centro de reunión social y deportiva desde 1953',
+    history: 'Fundado por un grupo de vecinos con el sueño de tener un espacio deportivo.',
+    location: { lat: -27.048, lng: -55.225 },
+    address: 'Av. Libertad 890',
+    media: {
+      photos: [
+        '/assets/images/places/club-1953.jpg',
+        '/assets/images/places/club-1980.jpg',
+        '/assets/images/places/club-2020.jpg',
+      ],
+      videos: [],
+      audios: ['/assets/audio/club-fundacion.mp3'],
+    },
+    timeline: ['1953', '1970', '1990', '2015'],
+    active: true,
+    features: ['Cancha de fútbol', 'Salón de eventos', 'Pileta'],
+  },
+  {
+    id: 'place-004',
+    name: 'Estación de Servicio Antigua',
+    category: 'comercio',
+    description: 'Primera estación de servicio del pueblo',
+    history: 'Punto de encuentro para viajeros y camioneros durante décadas.',
+    location: { lat: -27.044, lng: -55.229 },
+    address: 'Ruta Nacional 12, Km 1234',
+    media: {
+      photos: [
+        '/assets/images/places/estacion-1960.jpg',
+        '/assets/images/places/estacion-hoy.jpg',
+      ],
+      videos: [],
+      audios: [],
+    },
+    timeline: ['1960', '1980', '2000'],
+    active: false,
+    features: ['Edificio histórico', 'Cartelería original'],
+  },
+  {
+    id: 'place-005',
+    name: 'Barrio Centro',
+    category: 'barrio',
+    description: 'Núcleo histórico de Jardín América',
+    history: 'Donde se establecieron las primeras familias y comercios.',
+    location: { lat: -27.0465, lng: -55.227 },
+    address: 'Delimitado por Av. San Martín, Belgrano, Mitre y Sarmiento',
+    media: {
+      photos: [
+        '/assets/images/places/barrio-centro-1950.jpg',
+        '/assets/images/places/barrio-centro-hoy.jpg',
+      ],
+      videos: [],
+      audios: ['/assets/audio/barrio-historia.mp3'],
+    },
+    timeline: ['1940', '1960', '1980', '2000', '2020'],
+    active: true,
+    features: ['Arquitectura histórica', 'Comercios tradicionales'],
+  },
+];
+
+export const categories = [
+  { id: 'all', name: 'Todos', icon: 'FaMapMarkedAlt' },
+  { id: 'plaza', name: 'Plazas', icon: 'FaTree' },
+  { id: 'escuela', name: 'Escuelas', icon: 'FaGraduationCap' },
+  { id: 'club', name: 'Clubes', icon: 'FaFutbol' },
+  { id: 'comercio', name: 'Comercios', icon: 'FaStore' },
+  { id: 'barrio', name: 'Barrios', icon: 'FaHome' },
+];
+
+export default placesData;
