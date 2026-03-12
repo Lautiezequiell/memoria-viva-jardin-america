@@ -70,7 +70,7 @@ const Hero = () => {
           transition={{ delay: 0.6, duration: 0.6 }}
           className="text-xl md:text-2xl text-white/80 mb-4 max-w-2xl italic"
         >
-          "El pasado habla, si sabemos escuchar"
+          &ldquo;El pasado habla, si sabemos escuchar&rdquo;
         </motion.p>
 
         <motion.p
