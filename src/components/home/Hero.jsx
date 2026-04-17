@@ -9,7 +9,7 @@ const Hero = () => {
       <div className="absolute inset-0">
         <img
           src="/images/Plaza Colón/img3.jpg"
-          alt="Plaza Colón - Jardín América"
+          alt=""
           className="w-full h-full object-cover"
         />
         {/* Overlay gradient */}
