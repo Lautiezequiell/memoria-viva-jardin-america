@@ -39,7 +39,7 @@ const Navbar = () => {
     >
       <div className="container-custom">
         <div className="flex items-center justify-between h-16 lg:h-20">
-          <Link to="/" className="flex items-center gap-2">
+          <Link to="/" className="flex items-center">
             <img 
               src="./images/escudo jardin america PNG.png" 
               alt="Memoria Viva Jardín América"

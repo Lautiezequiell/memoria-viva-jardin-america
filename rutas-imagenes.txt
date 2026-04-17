@@ -1,0 +1,36 @@
+// RUTAS PARA IMÁGENES - MEMORIA VIVA JARDÍN AMÉRICA
+
+// 1. IMÁGENES PRINCIPALES (public/images/)
+// Coloca aquí las imágenes organizadas por categorías:
+public/images/Plaza Colón/          // Imágenes de Plaza Colón
+public/images/1946/                 // Imágenes de 1946
+public/images/1960/                 // Imágenes de 1960
+public/images/1980/                 // Imágenes de 1980
+public/images/2000/                 // Imágenes de 2000
+public/images/Entidades/            // Imágenes de entidades
+public/images/Festividades/         // Imágenes de festividades
+public/images/Fundadores - Pioneros - Pobladores/  // Imágenes de fundadores
+public/images/Logos/                // Logos
+public/images/Monumentos/           // Imágenes de monumentos
+public/images/Recortes Diarios/     // Recortes de diarios
+public/images/Ruta 12/              // Imágenes de Ruta 12
+public/images/Turismo/              // Imágenes de turismo
+
+// 2. IMÁGENES DE COMPONENTES (src/assets/images/)
+// Para imágenes usadas en componentes React:
+src/assets/images/hero/             // Imágenes para el Hero
+src/assets/images/gallery/          // Galerías
+src/assets/images/backgrounds/      // Fondos
+src/assets/images/icons/            // Iconos personalizados
+
+// 3. IMÁGENES DE SISTEMA (public/)
+// Archivos del sistema:
+public/escudo jardin america PNG.png  // Escudo actual
+public/favicon.ico                   // Icono del sitio
+public/logo192.png                    // Logo para PWA
+public/og-image.jpg                   // Imagen para redes sociales
+
+// 4. REFERENCIAS ACTUALES EN EL CÓDIGO:
+// Hero.jsx: /images/Plaza Colón/img3.jpg
+// PhotoTransform.jsx: /images/Plaza Colón/Plaza 0.jpg y /images/Plaza Colón/plaza anfiteatro hoy.JPG
+// Navbar.jsx: ./images/escudo jardin america PNG.png
