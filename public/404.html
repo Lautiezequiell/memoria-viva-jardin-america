@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#14532d" />
+    <title>Memoria Viva Jardín América | Historia y Patrimonio</title>
+  </head>
+  <body>
+    <noscript>Necesitas habilitar JavaScript para explorar esta plataforma cultural.</noscript>
+    <div id="root"></div>
+    <script>
+      // Single Page App for GitHub Pages
+      // Redirect to the index.html for all routes
+      var path = window.location.pathname;
+      var segments = path.split('/');
+      var lastSegment = segments[segments.length - 1];
+      
+      // If it's not the root and doesn't have a file extension
+      if (lastSegment && lastSegment.indexOf('.') === -1) {
+        window.location.href = '/memoria-viva-jardin-america/';
+      }
+    </script>
+  </body>
+</html>
