@@ -65,7 +65,7 @@ const photosData = [
     personas: ['Comunidad'],
     image: '/assets/images/photos/1975-fiesta-colonia.jpg',
     compareWith: null,
-    description: 'Celebración anual de la diversidad cultural en la plaza principal.',
+    description: 'Celebración anual de la diversidad cultural en la plaza Colón.',
     source: 'Archivo Municipal',
     tags: ['fiesta', 'cultura', 'comunidad', 'baile'],
     downloadable: true,

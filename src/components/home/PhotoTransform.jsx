@@ -14,12 +14,12 @@ const transformations = [
   },
   {
     id: 2,
-    title: 'Plaza Principal',
+    title: 'Plaza Colón',
     yearBefore: '1960',
     yearAfter: '2024',
-    imageBefore: '/assets/images/places/plaza-1960.jpg',
-    imageAfter: '/assets/images/places/plaza-2020.jpg',
-    description: 'El corazón cívico, de campo abierto a jardines',
+    imageBefore: '/images/Plaza Colón/Plaza 0.jpg',
+    imageAfter: '/images/Plaza Colón/plaza anfiteatro hoy.JPG',
+    description: 'Plaza Colón, el corazón cívico de Jardín América',
   },
   {
     id: 3,

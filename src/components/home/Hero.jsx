@@ -1,45 +1,17 @@
-import React, { useState, useRef } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import { FaPlay, FaPause, FaVolumeUp, FaVolumeMute } from 'react-icons/fa';
 
 const Hero = () => {
-  const [isPlaying, setIsPlaying] = useState(true);
-  const [isMuted, setIsMuted] = useState(true);
-  const videoRef = useRef(null);
-
-  const togglePlay = () => {
-    if (videoRef.current) {
-      if (isPlaying) {
-        videoRef.current.pause();
-      } else {
-        videoRef.current.play();
-      }
-      setIsPlaying(!isPlaying);
-    }
-  };
-
-  const toggleMute = () => {
-    if (videoRef.current) {
-      videoRef.current.muted = !isMuted;
-      setIsMuted(!isMuted);
-    }
-  };
 
   return (
     <section className="relative h-screen w-full overflow-hidden">
-      {/* Video Background */}
+      {/* Plaza Colón Background */}
       <div className="absolute inset-0">
-        <video
-          ref={videoRef}
-          autoPlay
-          muted
-          loop
-          playsInline
-          poster="/assets/video/historia-viva-hero-fallback.jpg"
+        <img
+          src="/images/Plaza Colón/img3.jpg"
+          alt="Plaza Colón - Jardín América"
           className="w-full h-full object-cover"
-        >
-          <source src="/assets/video/historia-viva-hero-1920-900.mp4" type="video/mp4" />
-        </video>
+        />
         {/* Overlay gradient */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/70" />
       </div>
@@ -96,24 +68,7 @@ const Hero = () => {
         </motion.div>
       </div>
 
-      {/* Video Controls */}
-      <div className="absolute bottom-8 right-8 z-20 flex gap-3">
-        <button
-          onClick={toggleMute}
-          className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-white/30 transition-all"
-          aria-label={isMuted ? 'Activar sonido' : 'Silenciar'}
-        >
-          {isMuted ? <FaVolumeMute /> : <FaVolumeUp />}
-        </button>
-        <button
-          onClick={togglePlay}
-          className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-white/30 transition-all"
-          aria-label={isPlaying ? 'Pausar video' : 'Reproducir video'}
-        >
-          {isPlaying ? <FaPause /> : <FaPlay />}
-        </button>
-      </div>
-
+      
       {/* Scroll indicator */}
       <motion.div
         initial={{ opacity: 0 }}
