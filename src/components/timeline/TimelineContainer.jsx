@@ -170,7 +170,7 @@ const TimelineContainer = () => {
                               onClick={(e) => {
                                 e.preventDefault();
                                 // Aquí puedes agregar la URL que desees
-                                window.open('https://ejemplo.com', '_blank');
+                                window.open('https://drive.google.com/drive/folders/1scNPellyi8Np_eE1K7IK8s17Q3rtDC80?usp=drive_link', '_blank');
                               }}
                             >
                               Ver más información

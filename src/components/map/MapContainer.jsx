@@ -114,35 +114,14 @@ const MapView = () => {
               animate={{ opacity: 1, y: 0 }}
               className="h-[500px] lg:h-[600px] rounded-2xl overflow-hidden shadow-xl"
             >
-              <MapContainer
-                center={mapCenter}
-                zoom={mapZoom}
-                scrollWheelZoom={true}
-                className="h-full w-full"
-              >
-                <TileLayer
-                  attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                  url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                />
-                {filteredPlaces.map((place) => (
-                  <Marker
-                    key={place.id}
-                    position={[place.location.lat, place.location.lng]}
-                    icon={createCustomIcon(categoryColors[place.category] || categoryColors.all)}
-                    eventHandlers={{
-                      click: () => setSelectedPlace(place),
-                    }}
-                  >
-                    <Popup>
-                      <div className="p-2 min-w-[200px]">
-                        <h3 className="font-heading font-bold text-lg mb-1">{place.name}</h3>
-                        <p className="text-sm text-gray-600 mb-2">{place.category}</p>
-                        <p className="text-sm text-gray-700 line-clamp-2">{place.description}</p>
-                      </div>
-                    </Popup>
-                  </Marker>
-                ))}
-              </MapContainer>
+              <iframe 
+                src="https://www.google.com/maps/d/embed?mid=1GswgKngHeyHmrw20zUT9AzN5yIGupVs&ehbc=2E312F" 
+                width="100%" 
+                height="100%" 
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+              />
             </motion.div>
           </div>
 
