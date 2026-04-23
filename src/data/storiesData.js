@@ -38,7 +38,7 @@ const storiesData = [
     author: 'Familia Martínez',
     year: 1983,
     recordedYear: 2021,
-    media: null,
+    media: 'https://lautiezequiell.github.io/memoria-viva-jardin-america/audio/CanYouHearTheMusic.mp3',
     thumbnail: 'https://lautiezequiell.github.io/memoria-viva-jardin-america/images/PlazaColon/Aerea01.jpg',
     duration: null,
     summary: 'Relato colectivo de una familia que vivió la evacuación durante la crecida del río Paraná.',

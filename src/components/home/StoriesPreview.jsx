@@ -56,23 +56,11 @@ const StoriesPreview = () => {
                 <Link to="/historias" className="group block h-full">
                   <div className="card h-full flex flex-col">
                     <div className="relative aspect-video overflow-hidden">
-                      {story.type === 'audio' ? (
-                        <div className="w-full h-full bg-gradient-to-br from-sepia-100 to-earth-100 flex items-center justify-center">
-                          <div className="text-center">
-                            <FaHeadphones className="text-6xl text-sepia-600 mx-auto mb-4" />
-                            <p className="text-sepia-800 font-medium">Audio disponible</p>
-                            <p className="text-sepia-600 text-sm mt-2">
-                              Ruta: /audio/{story.media}
-                            </p>
-                          </div>
-                        </div>
-                      ) : (
-                        <img
-                          src={story.thumbnail}
-                          alt={story.title}
-                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                        />
-                      )}
+                      <img
+                        src={story.thumbnail}
+                        alt={story.title}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                       <div className="absolute bottom-4 left-4 flex items-center gap-2">
                         <span className="px-3 py-1 bg-white/90 backdrop-blur-sm text-gray-800 rounded-full text-sm font-medium flex items-center gap-1">
