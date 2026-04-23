@@ -2,7 +2,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Hero from '../components/home/Hero';
 import PhotoTransform from '../components/home/PhotoTransform';
-import HistoryOfDay from '../components/home/HistoryOfDay';
 import TimelinePreview from '../components/home/TimelinePreview';
 import MapPreview from '../components/home/MapPreview';
 import StoriesPreview from '../components/home/StoriesPreview';
@@ -24,7 +23,6 @@ const Home = () => {
     >
       <Hero />
       <PhotoTransform />
-      <HistoryOfDay />
       <TimelinePreview />
       <MapPreview />
       <StoriesPreview />

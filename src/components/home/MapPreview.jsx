@@ -77,7 +77,7 @@ const MapPreview = () => {
           ))}
         </div>
 
-        {/* Map Preview Image */}
+        {/* Google Maps iframe */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -85,39 +85,17 @@ const MapPreview = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mt-12"
         >
-          <Link to="/mapa" className="group block relative rounded-2xl overflow-hidden">
-            <div className="aspect-[21/9] bg-gradient-to-br from-primary-100 to-earth-100 relative">
-              {/* Mock Map Visualization */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="relative w-full h-full max-w-4xl mx-auto p-8">
-                  {/* Map pins mock */}
-                  {placesData.slice(0, 5).map((place, idx) => (
-                    <div
-                      key={place.id}
-                      className="absolute w-8 h-8 bg-primary-600 rounded-full border-4 border-white shadow-lg flex items-center justify-center text-white text-xs font-bold animate-pulse"
-                      style={{
-                        left: `${20 + idx * 15}%`,
-                        top: `${30 + (idx % 2) * 20}%`,
-                        animationDelay: `${idx * 0.2}s`,
-                      }}
-                    >
-                      {idx + 1}
-                    </div>
-                  ))}
-                  <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg shadow-md">
-                    <p className="text-sm font-medium text-gray-700">
-                      {placesData.length} lugares históricos
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors flex items-center justify-center">
-                <span className="px-6 py-3 bg-white text-gray-900 rounded-full font-medium shadow-lg transform group-hover:scale-105 transition-transform">
-                  Ver mapa interactivo
-                </span>
-              </div>
-            </div>
-          </Link>
+          <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+            <iframe 
+              src="https://www.google.com/maps/d/embed?mid=1GswgKngHeyHmrw20zUT9AzN5yIGupVs&ehbc=2E312F" 
+              width="100%" 
+              height="480" 
+              className="w-full border-0"
+              title="Mapa interactivo de Jardín América"
+              allowFullScreen
+              loading="lazy"
+            />
+          </div>
         </motion.div>
       </div>
     </section>

@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaCloudUploadAlt, FaCamera, FaBook, FaTag, FaEnvelope, FaUser, FaCheckCircle } from 'react-icons/fa';
+import { FaBook, FaTag, FaEnvelope, FaUser, FaCheckCircle } from 'react-icons/fa';
 
 const ParticipationHub = () => {
-  const [activeTab, setActiveTab] = useState('photo');
+  const [activeTab, setActiveTab] = useState('story');
   const [submitted, setSubmitted] = useState(false);
 
   const tabs = [
-    { id: 'photo', label: 'Subir Foto', icon: FaCamera },
     { id: 'story', label: 'Enviar Historia', icon: FaBook },
     { id: 'identify', label: 'Identificar', icon: FaTag },
   ];
@@ -76,50 +75,6 @@ const ParticipationHub = () => {
             </div>
           ) : (
             <div className="card p-8">
-              {activeTab === 'photo' && (
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <h2 className="font-heading text-2xl font-bold text-gray-900 mb-6">Subir Fotografía Histórica</h2>
-                  
-                  <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-primary-400 transition-colors">
-                    <FaCloudUploadAlt className="w-12 h-12 text-gray-400 mx-auto mb-4" />
-                    <p className="text-gray-600 mb-2">Arrastrá tus fotos aquí o</p>
-                    <button type="button" className="text-primary-600 font-medium hover:underline">seleccioná archivos</button>
-                    <p className="text-sm text-gray-400 mt-2">JPG, PNG hasta 10MB</p>
-                  </div>
-
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1">Año aproximado</label>
-                      <input type="number" placeholder="1950" className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500" />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1">Lugar</label>
-                      <input type="text" placeholder="Ej: Calle San Martín" className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500" />
-                    </div>
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">Descripción</label>
-                    <textarea rows={4} placeholder="Contanos sobre esta foto..." className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500" />
-                  </div>
-
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div className="flex items-center gap-2">
-                      <FaUser className="text-gray-400" />
-                      <input type="text" placeholder="Tu nombre" className="flex-1 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500" />
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <FaEnvelope className="text-gray-400" />
-                      <input type="email" placeholder="Tu email" className="flex-1 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500" />
-                    </div>
-                  </div>
-
-                  <button type="submit" className="w-full btn-primary py-4 text-lg">
-                    Enviar fotografía
-                  </button>
-                </form>
-              )}
-
               {activeTab === 'story' && (
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <h2 className="font-heading text-2xl font-bold text-gray-900 mb-6">Compartir tu Historia</h2>

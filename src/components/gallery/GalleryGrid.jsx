@@ -216,8 +216,8 @@ const GalleryGrid = () => {
                   exit={{ opacity: 0, scale: 0.9 }}
                   transition={{ delay: index * 0.05 }}
                   onClick={() => {
-                    setSelectedPhoto(photo);
-                    setCompareMode(false);
+                    // Redirigir a página externa (ej: Google Drive)
+                    window.open('https://drive.google.com/your-link', '_blank');
                   }}
                   className="group relative aspect-square rounded-xl overflow-hidden cursor-pointer bg-gray-100"
                 >
@@ -241,6 +241,10 @@ const GalleryGrid = () => {
                       Destacada
                     </div>
                   )}
+                  {/* Indicador de redirección */}
+                  <div className="absolute top-2 right-2 px-2 py-1 bg-primary-600 text-white text-xs rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+                    Ver más
+                  </div>
                 </motion.div>
               ))}
             </AnimatePresence>

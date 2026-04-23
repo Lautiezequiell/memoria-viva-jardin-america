@@ -65,7 +65,7 @@ const TimelineContainer = () => {
                     : 'bg-white text-gray-700 hover:bg-gray-50'
                 }`}
               >
-                {decade.decade}s
+                {decade.decade === 'Ahora' ? decade.decade : `${decade.decade}s`}
               </button>
             ))}
           </div>
@@ -136,6 +136,16 @@ const TimelineContainer = () => {
                           className="w-full text-left"
                         >
                           <div className="card p-6 hover:shadow-xl transition-all">
+                            {/* Imagen informativa */}
+                            {event.media && (
+                              <div className="aspect-video rounded-lg overflow-hidden mb-4">
+                                <img
+                                  src={Array.isArray(event.media) ? event.media[0] : event.media.before || event.media}
+                                  alt={event.title}
+                                  className="w-full h-full object-cover"
+                                />
+                              </div>
+                            )}
                             <div className={`flex items-center gap-3 mb-3 ${
                               isEven ? 'md:justify-end' : ''
                             }`}>
@@ -150,9 +160,21 @@ const TimelineContainer = () => {
                             <h3 className="font-heading text-xl font-bold text-gray-900 mb-2">
                               {event.title}
                             </h3>
-                            <p className="text-gray-600 text-sm line-clamp-2">
+                            <p className="text-gray-600 text-sm mb-4">
                               {event.description}
                             </p>
+                            {/* Botón de acceso */}
+                            <a
+                              href="#"
+                              className="inline-flex items-center gap-2 px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white font-medium rounded-lg transition-colors"
+                              onClick={(e) => {
+                                e.preventDefault();
+                                // Aquí puedes agregar la URL que desees
+                                window.open('https://ejemplo.com', '_blank');
+                              }}
+                            >
+                              Ver más información
+                            </a>
                           </div>
                         </button>
 

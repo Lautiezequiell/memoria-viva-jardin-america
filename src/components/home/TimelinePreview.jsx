@@ -51,7 +51,7 @@ const TimelinePreview = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                   <div className="absolute bottom-0 left-0 right-0 p-6">
                     <span className="text-5xl font-heading font-bold text-white/90">
-                      {decade.decade}s
+                      {decade.decade === 'Ahora' ? decade.decade : `${decade.decade}s`}
                     </span>
                     <h3 className="text-xl font-bold text-white mt-2">{decade.title}</h3>
                     <p className="text-white/70 text-sm mt-1 line-clamp-2">
