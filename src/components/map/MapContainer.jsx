@@ -1,43 +1,8 @@
 import React, { useState, useMemo } from 'react';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaMapMarkerAlt, FaTree, FaGraduationCap, FaFutbol, FaStore, FaHome, FaFilter } from 'react-icons/fa';
-import L from 'leaflet';
 import placesData, { categories } from '../../data/placesData';
 
-// Custom marker icons
-const createCustomIcon = (color) => {
-  return L.divIcon({
-    className: 'custom-marker',
-    html: `<div style="
-      width: 32px;
-      height: 32px;
-      background-color: ${color};
-      border-radius: 50%;
-      border: 3px solid white;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    ">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
-        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-      </svg>
-    </div>`,
-    iconSize: [32, 32],
-    iconAnchor: [16, 32],
-    popupAnchor: [0, -32],
-  });
-};
-
-const categoryColors = {
-  all: '#15803d',
-  plaza: '#22c55e',
-  escuela: '#d97706',
-  club: '#dc2626',
-  comercio: '#7c3aed',
-  barrio: '#0891b2',
-};
 
 const categoryIcons = {
   all: FaMapMarkerAlt,
@@ -57,9 +22,7 @@ const MapView = () => {
     return placesData.filter(place => place.category === activeCategory);
   }, [activeCategory]);
 
-  const mapCenter = [-27.046, -55.227];
-  const mapZoom = 14;
-
+  
   return (
     <div className="min-h-screen pt-20">
       {/* Header */}
@@ -152,8 +115,7 @@ const MapView = () => {
                     >
                       <div className="flex items-start gap-3">
                         <div
-                          className="w-10 h-10 rounded-full flex items-center justify-center text-white flex-shrink-0"
-                          style={{ backgroundColor: categoryColors[place.category] }}
+                          className="w-10 h-10 rounded-full bg-primary-600 flex items-center justify-center text-white flex-shrink-0"
                         >
                           {React.createElement(categoryIcons[place.category] || FaMapMarkerAlt, { size: 16 })}
                         </div>
@@ -206,8 +168,7 @@ const MapView = () => {
                   ×
                 </button>
                 <div
-                  className="absolute bottom-4 left-4 px-3 py-1 rounded-full text-white text-sm font-medium capitalize"
-                  style={{ backgroundColor: categoryColors[selectedPlace.category] }}
+                  className="absolute bottom-4 left-4 px-3 py-1 bg-primary-600 rounded-full text-white text-sm font-medium capitalize"
                 >
                   {selectedPlace.category}
                 </div>
