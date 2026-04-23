@@ -178,45 +178,7 @@ const TimelineContainer = () => {
                           </div>
                         </button>
 
-                        {/* Expanded Event Details */}
-                        <AnimatePresence>
-                          {selectedEvent === event.id && (
-                            <motion.div
-                              initial={{ opacity: 0, height: 0 }}
-                              animate={{ opacity: 1, height: 'auto' }}
-                              exit={{ opacity: 0, height: 0 }}
-                              className="mt-4 overflow-hidden"
-                            >
-                              <div className="card p-6 bg-stone-50">
-                                <p className="text-gray-700 mb-4">
-                                  {event.description}
-                                </p>
-                                {event.media && (
-                                  <div className="aspect-video rounded-lg overflow-hidden mb-4">
-                                    <img
-                                      src={Array.isArray(event.media) ? event.media[0] : event.media.before || event.media}
-                                      alt={event.title}
-                                      className="w-full h-full object-cover"
-                                    />
-                                  </div>
-                                )}
-                                <div className="flex flex-wrap gap-2">
-                                  {event.tags?.map(tag => (
-                                    <span key={tag} className="px-2 py-1 bg-white text-gray-600 rounded text-xs">
-                                      #{tag}
-                                    </span>
-                                  ))}
-                                </div>
-                                {event.sources && (
-                                  <p className="text-xs text-gray-500 mt-3">
-                                    Fuente: {event.sources.join(', ')}
-                                  </p>
-                                )}
-                              </div>
-                            </motion.div>
-                          )}
-                        </AnimatePresence>
-                      </div>
+                                              </div>
                     </motion.div>
                   );
                 })}
