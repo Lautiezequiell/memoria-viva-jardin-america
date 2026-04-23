@@ -75,7 +75,7 @@ const timelineData = [
         title: 'Inauguración del Polideportivo',
         description: 'Nuevo centro deportivo para la comunidad.',
         type: 'photo',
-        media: ['https://lautiezequiell.github.io/memoria-viva-jardin-america/images/anio2000/polideportivo1-2000.jpg'],
+        media: ['https://lautiezequiell.github.io/memoria-viva-jardin-america/images/anio2000/polideportivo1-2000.JPG'],
         location: { lat: -27.047, lng: -55.226 },
         sources: ['Municipalidad'],
         tags: ['deporte', 'polideportivo', 'comunidad'],
