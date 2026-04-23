@@ -4,7 +4,7 @@ const timelineData = [
     decade: 1946,
     title: 'Los Orígenes',
     description: 'Fundación y primeros años de Jardín América',
-    image: 'https://lautiezequiell.github.io/memoria-viva-jardin-america/images/anio1946/ComisionJA.jpg',
+    image: 'https://lautiezequiell.github.io/memoria-viva-jardin-america/images/anio1946/ComisionJA.JPG',
     events: [
       {
         id: 'evt-1946-001',
@@ -44,7 +44,7 @@ const timelineData = [
     decade: 1980,
     title: 'Modernización',
     description: 'Llegada de servicios y transformación urbana',
-    image: './images/anio1980/ActualShellPetromisionesAvAconcaguayAntartidaArg-1993.jpg',
+    image: 'https://lautiezequiell.github.io/memoria-viva-jardin-america/images/anio1980/ActualShellPetromisionesAvAconcaguayAntartidaArg-1993.jpg',
     events: [
       {
         id: 'evt-1985-001',
