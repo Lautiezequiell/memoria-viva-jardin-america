@@ -4,7 +4,7 @@ const timelineData = [
     decade: 1946,
     title: 'Los Orígenes',
     description: 'Fundación y primeros años de Jardín América',
-    image: '/images/timeline/1946-fundacion.jpg',
+    image: './images/anio1946/ComisionJA.jpg',
     events: [
       {
         id: 'evt-1946-001',
@@ -12,7 +12,7 @@ const timelineData = [
         title: 'Fundación de Jardín América',
         description: 'Nace nuestro pueblo con la llegada de las primeras familias.',
         type: 'photo',
-        media: ['/images/timeline/1946-fundacion.jpg'],
+        media: ['./images/anio1946/PrimerosPobladores.jpg'],
         location: { lat: -27.05, lng: -55.23 },
         sources: ['Archivo Municipal'],
         tags: ['fundacion', 'colonos', 'inmigracion'],
@@ -24,7 +24,7 @@ const timelineData = [
     decade: 1960,
     title: 'Crecimiento',
     description: 'Expansión urbana y desarrollo institucional',
-    image: '/images/timeline/1960-crecimiento.jpg',
+    image: './images/anio1960/Inicios-1960.jpg',
     events: [
       {
         id: 'evt-1965-001',
@@ -32,7 +32,7 @@ const timelineData = [
         title: 'Construcción de la Municipalidad',
         description: 'Se edifica la casa de gobierno municipal.',
         type: 'photo',
-        media: ['/images/timeline/1965-municipalidad.jpg'],
+        media: ['./images/anio1960/MunicipalidadAntigua.jpg'],
         location: { lat: -27.048, lng: -55.225 },
         sources: ['Archivo Municipal'],
         tags: ['municipalidad', 'construccion', 'gobierno'],
@@ -44,17 +44,17 @@ const timelineData = [
     decade: 1980,
     title: 'Modernización',
     description: 'Llegada de servicios y transformación urbana',
-    image: '/images/timeline/1980-modern.jpg',
+    image: './images/anio1980/ActualShellPetromisionesAvAconcaguayAntartidaArg-1993.jpg',
     events: [
       {
         id: 'evt-1985-001',
         year: 1985,
         title: 'Pavimentación de calles principales',
-        description: 'Calle San Martín y avenidas principales reciben asfalto.',
+        description: 'Calle Washington 1992 recibe empedrado .',
         type: 'compare',
         media: {
-          before: '/images/timeline/1985-calle-antes.jpg',
-          after: '/images/timeline/1985-calle-despues.jpg',
+          before: './images/anio1980/EmpedradoAvWashington1992.jpg',
+          after: './images/anio1980/ActualShellPetromisionesAvAconcaguayAntartidaArg-1993.jpg',
         },
         location: { lat: -27.045, lng: -55.227 },
         sources: ['Municipalidad'],
@@ -67,7 +67,7 @@ const timelineData = [
     decade: 2000,
     title: 'Consolidación',
     description: 'Madurez institucional y cultural',
-    image: '/images/timeline/2000-consolidacion.jpg',
+    image: './images/anio2000/Aerea02.jpg',
     events: [
       {
         id: 'evt-2005-001',
@@ -75,7 +75,7 @@ const timelineData = [
         title: 'Inauguración del Polideportivo',
         description: 'Nuevo centro deportivo para la comunidad.',
         type: 'photo',
-        media: ['/images/timeline/2005-polideportivo.jpg'],
+        media: ['./images/anio2000/polideportivo1-2000.jpg'],
         location: { lat: -27.047, lng: -55.226 },
         sources: ['Municipalidad'],
         tags: ['deporte', 'polideportivo', 'comunidad'],
@@ -87,7 +87,7 @@ const timelineData = [
     decade: 'Ahora',
     title: 'Presente',
     description: 'Jardín América hoy y sus desafíos',
-    image: '/images/timeline/ahora-presente.jpg',
+    image: './images/ahora/Municipalidadhoy-2000.jpg',
     events: [
       {
         id: 'evt-2024-001',
@@ -95,7 +95,7 @@ const timelineData = [
         title: 'Desarrollo Turístico',
         description: 'Impulso al turismo local con nuevos atractivos.',
         type: 'photo',
-        media: ['/images/timeline/2024-turismo.jpg'],
+        media: ['./images/ahora/turismoParaisoLodge1.jpg'],
         location: { lat: -27.05, lng: -55.23 },
         sources: ['Secretaría de Turismo'],
         tags: ['turismo', 'desarrollo', 'presente'],

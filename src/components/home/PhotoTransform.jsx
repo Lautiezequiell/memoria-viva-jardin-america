@@ -8,8 +8,8 @@ const transformations = [
     title: 'Municipalidad',
     yearBefore: '1940',
     yearAfter: '2026',
-    imageBefore: '/images/antes-despues/Municipalidadantigua.jpg',
-    imageAfter: '/images/antes-despues/MunicipalidadAhora.jpg',
+    imageBefore: 'http://localhost:3000/memoria-viva-jardin-america/images/antes-despues/Municipalidadantigua.jpg',
+    imageAfter: 'http://localhost:3000/memoria-viva-jardin-america/images/antes-despues/MunicipalidadAhora.jpg',
     description: 'El corazón administrativo de Jardín América',
   },
   {
@@ -17,8 +17,8 @@ const transformations = [
     title: 'Plaza Colón',
     yearBefore: '1960',
     yearAfter: '2024',
-    imageBefore: '/images/antes-despues/PlazaAntes.jpg',
-    imageAfter: '/images/antes-despues/PlazaAhora.jpeg',
+    imageBefore: 'http://localhost:3000/memoria-viva-jardin-america/images/antes-despues/PlazaAntes.jpg',
+    imageAfter: 'http://localhost:3000/memoria-viva-jardin-america/images/antes-despues/PlazaAhora.jpeg',
     description: 'Plaza Colón, el corazón cívico de Jardín América',
   },
   {
@@ -26,8 +26,8 @@ const transformations = [
     title: 'Iglesia',
     yearBefore: '1950',
     yearAfter: '2024',
-    imageBefore: '/images/antes-despues/IglesiaAntes.JPG',
-    imageAfter: '/images/antes-despues/IglesiaAhora.jpg',
+    imageBefore: 'http://localhost:3000/memoria-viva-jardin-america/images/antes-despues/IglesiaAntes.JPG',
+    imageAfter: 'http://localhost:3000/memoria-viva-jardin-america/images/antes-despues/IglesiaAhora.jpg',
     description: 'El templo parroquial a través del tiempo',
   },
   {
@@ -35,8 +35,8 @@ const transformations = [
     title: 'Ruta 12 Aconcagua',
     yearBefore: '1970',
     yearAfter: '2024',
-    imageBefore: '/images/antes-despues/Ruta12Antes.jpg',
-    imageAfter: '/images/antes-despues/Ruta12Ahora.JPG',
+    imageBefore: 'http://localhost:3000/memoria-viva-jardin-america/images/antes-despues/Ruta12Antes.jpg',
+    imageAfter: 'http://localhost:3000/memoria-viva-jardin-america/images/antes-despues/Ruta12Ahora.JPG',
     description: 'La principal vía de conexión',
   },
   {
@@ -44,8 +44,8 @@ const transformations = [
     title: 'Saltos del Tabay',
     yearBefore: '1980',
     yearAfter: '2024',
-    imageBefore: '/images/antes-despues/SaltoAntes.jpg',
-    imageAfter: '/images/antes-despues/SaltoAhora.JPG',
+    imageBefore: 'http://localhost:3000/memoria-viva-jardin-america/images/antes-despues/SaltoAntes.jpg',
+    imageAfter: 'http://localhost:3000/memoria-viva-jardin-america/images/antes-despues/SaltoAhora.JPG',
     description: 'El tesoro natural de nuestra tierra',
   },
 
@@ -66,6 +66,7 @@ const PhotoTransform = () => {
   };
 
   const handleTouchMove = (e) => {
+    if (!isDragging) return;
     const rect = e.currentTarget.getBoundingClientRect();
     const x = ((e.touches[0].clientX - rect.left) / rect.width) * 100;
     setSliderPosition(Math.max(0, Math.min(100, x)));

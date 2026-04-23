@@ -139,11 +139,11 @@ const TimelineContainer = () => {
                             {/* Imagen informativa */}
                             {event.media && (
                               <div className="aspect-video rounded-lg overflow-hidden mb-4">
-                                <img
+                                {/* <img
                                   src={Array.isArray(event.media) ? event.media[0] : event.media.before || event.media}
                                   alt={event.title}
                                   className="w-full h-full object-cover"
-                                />
+                                /> */}
                               </div>
                             )}
                             <div className={`flex items-center gap-3 mb-3 ${
