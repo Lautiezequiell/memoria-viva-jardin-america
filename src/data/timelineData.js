@@ -87,7 +87,7 @@ const timelineData = [
     decade: 'Ahora',
     title: 'Presente',
     description: 'Jardín América hoy y sus desafíos',
-    image: 'https://lautiezequiell.github.io/memoria-viva-jardin-america/images/ahora/Municipalidadhoy-2000.jpg',
+    image: 'https://lautiezequiell.github.io/memoria-viva-jardin-america/images/ahora/Cartel.jpg',
     events: [
       {
         id: 'evt-2024-001',
