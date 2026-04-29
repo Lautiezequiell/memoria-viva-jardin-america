@@ -1,26 +1,9 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaMapMarkerAlt, FaTree, FaGraduationCap, FaFutbol, FaStore, FaHome, FaFilter } from 'react-icons/fa';
-import placesData, { categories } from '../../data/placesData';
 
-
-const categoryIcons = {
-  all: FaMapMarkerAlt,
-  plaza: FaTree,
-  escuela: FaGraduationCap,
-  club: FaFutbol,
-  comercio: FaStore,
-  barrio: FaHome,
-};
 
 const MapView = () => {
-  const [activeCategory, setActiveCategory] = useState('all');
   const [selectedPlace, setSelectedPlace] = useState(null);
-
-  const filteredPlaces = useMemo(() => {
-    if (activeCategory === 'all') return placesData;
-    return placesData.filter(place => place.category === activeCategory);
-  }, [activeCategory]);
 
   
   return (
@@ -41,101 +24,22 @@ const MapView = () => {
         </div>
       </div>
 
-      {/* Category Filters */}
-      <div className="bg-white border-b border-gray-200 sticky top-20 z-20">
-        <div className="container-custom py-4">
-          <div className="flex items-center gap-2 overflow-x-auto pb-2">
-            <FaFilter className="text-gray-400 mr-2 flex-shrink-0" />
-            {categories.map((cat) => {
-              const Icon = categoryIcons[cat.id];
-              return (
-                <button
-                  key={cat.id}
-                  onClick={() => setActiveCategory(cat.id)}
-                  className={`flex-shrink-0 inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all ${
-                    activeCategory === cat.id
-                      ? 'bg-primary-600 text-white shadow-md'
-                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                  }`}
-                >
-                  <Icon className="text-sm" />
-                  {cat.name}
-                </button>
-              );
-            })}
-          </div>
-        </div>
-      </div>
-
-      {/* Map and Sidebar */}
+      {/* Map Only */}
       <div className="container-custom py-6">
-        <div className="grid lg:grid-cols-3 gap-6">
-          {/* Map */}
-          <div className="lg:col-span-2">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="h-[500px] lg:h-[600px] rounded-2xl overflow-hidden shadow-xl"
-            >
-              <iframe 
-                src="https://www.google.com/maps/d/embed?mid=1GswgKngHeyHmrw20zUT9AzN5yIGupVs&ehbc=2E312F" 
-                width="100%" 
-                height="100%" 
-                style={{ border: 0 }}
-                allowFullScreen=""
-                loading="lazy"
-              />
-            </motion.div>
-          </div>
-
-          {/* Sidebar - Places List */}
-          <div className="lg:col-span-1">
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden h-[500px] lg:h-[600px] flex flex-col">
-              <div className="p-4 bg-gray-50 border-b">
-                <h2 className="font-heading font-bold text-lg">
-                  Lugares ({filteredPlaces.length})
-                </h2>
-              </div>
-              <div className="overflow-y-auto flex-grow p-4 space-y-3">
-                <AnimatePresence mode="popLayout">
-                  {filteredPlaces.map((place, index) => (
-                    <motion.div
-                      key={place.id}
-                      layout
-                      initial={{ opacity: 0, x: 20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      exit={{ opacity: 0, x: -20 }}
-                      transition={{ delay: index * 0.05 }}
-                      onClick={() => setSelectedPlace(place)}
-                      className={`p-4 rounded-xl cursor-pointer transition-all ${
-                        selectedPlace?.id === place.id
-                          ? 'bg-primary-50 border-2 border-primary-200'
-                          : 'bg-gray-50 hover:bg-gray-100 border-2 border-transparent'
-                      }`}
-                    >
-                      <div className="flex items-start gap-3">
-                        <div
-                          className="w-10 h-10 rounded-full bg-primary-600 flex items-center justify-center text-white flex-shrink-0"
-                        >
-                          {React.createElement(categoryIcons[place.category] || FaMapMarkerAlt, { size: 16 })}
-                        </div>
-                        <div className="flex-grow min-w-0">
-                          <h3 className="font-bold text-gray-900 truncate">{place.name}</h3>
-                          <p className="text-sm text-gray-600 line-clamp-2">{place.description}</p>
-                          <div className="flex items-center gap-2 mt-2 text-xs text-gray-500">
-                            <span className="capitalize">{place.category}</span>
-                            <span>•</span>
-                            <span>{place.timeline.length} épocas</span>
-                          </div>
-                        </div>
-                      </div>
-                    </motion.div>
-                  ))}
-                </AnimatePresence>
-              </div>
-            </div>
-          </div>
-        </div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="h-[600px] rounded-2xl overflow-hidden shadow-xl"
+        >
+          <iframe 
+            src="https://www.google.com/maps/d/embed?mid=1GswgKngHeyHmrw20zUT9AzN5yIGupVs&ehbc=2E312F" 
+            width="100%" 
+            height="100%" 
+            style={{ border: 0 }}
+            allowFullScreen=""
+            loading="lazy"
+          />
+        </motion.div>
       </div>
 
       {/* Selected Place Detail Modal */}

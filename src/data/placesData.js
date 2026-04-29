@@ -9,7 +9,7 @@ const placesData = [
     address: 'Av. San Martín y Calle 9 de Julio',
     media: {
       photos: [
-        { image: 'https://lautiezequiell.github.io/memoria-viva-jardin-america/images/places/plaza-colon.jpg' },
+        { image: 'https://lautiezequiell.github.io/memoria-viva-jardin-america/images/anio1946/ComisionJA.JPG' },
       ],
       videos: [],
       audios: [],
@@ -28,7 +28,7 @@ const placesData = [
     address: 'Ruta Provincial 2, Km 15',
     media: {
       photos: [
-        { image: 'https://lautiezequiell.github.io/memoria-viva-jardin-america/images/places/saltos-tabay.jpg' },
+        { image: 'https://lautiezequiell.github.io/memoria-viva-jardin-america/images/anio1946/ComisionJA.JPG' },
       ],
       videos: [],
       audios: [],
@@ -47,7 +47,7 @@ const placesData = [
     address: 'Calle Belgrano y Av. Mitre',
     media: {
       photos: [
-        { image: 'https://lautiezequiell.github.io/memoria-viva-jardin-america/images/places/plaza-belgrano.jpg' },
+        { image: 'https://lautiezequiell.github.io/memoria-viva-jardin-america/images/anio1946/ComisionJA.JPG' },
       ],
       videos: [],
       audios: [],
@@ -66,7 +66,7 @@ const placesData = [
     address: 'Av. San Martín entre Calle 25 de Mayo y 9 de Julio',
     media: {
       photos: [
-        { image: 'https://lautiezequiell.github.io/memoria-viva-jardin-america/images/places/plazoletas-colectividades.jpg' },
+        { image: 'https://lautiezequiell.github.io/memoria-viva-jardin-america/images/anio1946/ComisionJA.JPG' },
       ],
       videos: [],
       audios: [],
@@ -85,7 +85,7 @@ const placesData = [
     address: 'Ruta Nacional 12, Km 1230',
     media: {
       photos: [
-        { image: 'https://lautiezequiell.github.io/memoria-viva-jardin-america/images/places/municipalidad.jpg' },
+        { image: 'https://lautiezequiell.github.io/memoria-viva-jardin-america/images/anio1946/ComisionJA.JPG' },
       ],
       videos: [],
       audios: [],
