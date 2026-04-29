@@ -10,6 +10,7 @@ const placesData = [
     media: {
       photos: [
         { image: 'https://lautiezequiell.github.io/memoria-viva-jardin-america/images/PlazaColon/Construcción Plaza colon.jpg' },
+        { image: 'https://lautiezequiell.github.io/memoria-viva-jardin-america/images/ahora/Cartel.jpg' },
       ],
       videos: [],
       audios: [],
