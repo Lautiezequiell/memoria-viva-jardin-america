@@ -16,6 +16,7 @@ const Stories = lazy(() => import('./pages/Stories'));
 const Audiovisual = lazy(() => import('./pages/Audiovisual'));
 const Participa = lazy(() => import('./pages/Participa'));
 const Education = lazy(() => import('./pages/Education'));
+const Creditos = lazy(() => import('./pages/Creditos'));
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
                 <Route path="/audiovisual" element={<Audiovisual />} />
                 <Route path="/participa" element={<Participa />} />
                 <Route path="/escuela" element={<Education />} />
+                <Route path="/creditos" element={<Creditos />} />
               </Routes>
             </Suspense>
           </AnimatePresence>
