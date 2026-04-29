@@ -9,7 +9,7 @@ const placesData = [
     address: 'Av. San Martín y Calle 9 de Julio',
     media: {
       photos: [
-        { image: 'https://lautiezequiell.github.io/memoria-viva-jardin-america/images/anio1946/ComisionJA.JPG' },
+        { image: 'https://lautiezequiell.github.io/memoria-viva-jardin-america/images/PlazaColon/Construcción Plaza colon.jpg' },
       ],
       videos: [],
       audios: [],
@@ -28,7 +28,7 @@ const placesData = [
     address: 'Ruta Provincial 2, Km 15',
     media: {
       photos: [
-        { image: 'https://lautiezequiell.github.io/memoria-viva-jardin-america/images/anio1946/ComisionJA.JPG' },
+        { image: 'https://lautiezequiell.github.io/memoria-viva-jardin-america/images/Turismo/turismo Tabay - antigua entrada.jpg' },
       ],
       videos: [],
       audios: [],
@@ -47,7 +47,7 @@ const placesData = [
     address: 'Calle Belgrano y Av. Mitre',
     media: {
       photos: [
-        { image: 'https://lautiezequiell.github.io/memoria-viva-jardin-america/images/anio1946/ComisionJA.JPG' },
+        { image: 'https://lautiezequiell.github.io/memoria-viva-jardin-america/images/plazaBelgrano/PlazaBelgranoyMalvinasAntigua.png' },
       ],
       videos: [],
       audios: [],

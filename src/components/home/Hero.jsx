@@ -8,7 +8,7 @@ const Hero = () => {
       {/* Plaza Colón Background */}
       <div className="absolute inset-0">
         <img 
-          src="https://lautiezequiell.github.io/memoria-viva-jardin-america/images/PlazaColon/Aerea01.jpg"
+          src="https://lautiezequiell.github.io/memoria-viva-jardin-america/images/PlazaColon/plaza 000.jpg"
           alt="Plaza Colón, Jardín América - Vista aérea histórica"
           className="w-full h-full object-cover"
           loading="eager"
