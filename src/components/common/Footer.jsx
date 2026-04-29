@@ -74,7 +74,31 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-white/20 mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+        {/* Créditos Section */}
+        <div className="border-t border-white/20 mt-12 pt-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <div className="bg-white/5 rounded-lg p-6">
+              <h5 className="font-heading font-bold text-lg mb-3 text-white">Créditos</h5>
+              <div className="space-y-2 text-sm">
+                <p className="text-primary-100">
+                  <span className="font-semibold text-white">Desarrollo:</span> Lautaro Ezequiel Guerrero
+                </p>
+                <p className="text-primary-100 italic">
+                  Agradecimientos especiales a mi mentor por el acompañamiento en el desarrollo del proyecto
+                </p>
+              </div>
+            </div>
+            <div className="bg-white/5 rounded-lg p-6">
+              <h5 className="font-heading font-bold text-lg mb-3 text-white">Sobre el Proyecto</h5>
+              <p className="text-primary-100 text-sm leading-relaxed">
+                Memoria Viva Jardín América es una iniciativa digital para preservar y compartir la historia de nuestra comunidad, 
+                documentando los momentos que nos definen como pueblo.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="border-t border-white/20 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-primary-100 text-sm">
             © {currentYear} Memoria Viva Jardín América. Todos los derechos reservados.
           </p>

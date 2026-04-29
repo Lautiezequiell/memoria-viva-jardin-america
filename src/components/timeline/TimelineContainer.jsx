@@ -86,8 +86,9 @@ const TimelineContainer = () => {
             <div className="relative aspect-[21/9] rounded-2xl overflow-hidden mb-12">
               <img
                 src={currentDecade.image}
-                alt={currentDecade.title}
+                alt={`${currentDecade.title} - Imagen histórica de la década de ${currentDecade.decade}s`}
                 className="w-full h-full object-cover"
+                loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12">
@@ -141,8 +142,9 @@ const TimelineContainer = () => {
                               <div className="aspect-video rounded-lg overflow-hidden mb-4">
                                 <img
                                   src={Array.isArray(event.media) ? event.media[0] : event.media.before || event.media}
-                                  alt={event.title}
+                                  alt={`${event.title} - Imagen histórica de ${event.year}`}
                                   className="w-full h-full object-cover"
+                                  loading="lazy"
                                 />
                               </div>
                             )}

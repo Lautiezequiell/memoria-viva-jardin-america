@@ -7,7 +7,13 @@ const Hero = () => {
     <section className="relative h-screen w-full overflow-hidden">
       {/* Plaza Colón Background */}
       <div className="absolute inset-0">
-                {/* Overlay gradient */}
+        <img 
+          src="https://lautiezequiell.github.io/memoria-viva-jardin-america/images/PlazaColon/Aerea01.jpg"
+          alt="Plaza Colón, Jardín América - Vista aérea histórica"
+          className="w-full h-full object-cover"
+          loading="eager"
+        />
+        {/* Overlay gradient */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/70" />
       </div>
 

@@ -58,8 +58,9 @@ const StoriesPreview = () => {
                     <div className="relative aspect-video overflow-hidden">
                       <img
                         src={story.thumbnail}
-                        alt={story.title}
+                        alt={`${story.title} - Portada de historia de ${story.author}`}
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        loading="lazy"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                       <div className="absolute bottom-4 left-4 flex items-center gap-2">

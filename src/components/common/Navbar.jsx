@@ -41,8 +41,8 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16 lg:h-20">
           <Link to="/" className="flex items-center">
             <img 
-              src="./images/escudo jardin america PNG.png" 
-              alt="Memoria Viva Jardín América"
+              src="https://lautiezequiell.github.io/memoria-viva-jardin-america/images/escudo jardin america PNG.png" 
+              alt="Escudo de Jardín América - Memoria Viva"
               className="h-10 lg:h-12 w-auto transition-all mix-blend-multiply"
             />
           </Link>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Hero from '../components/home/Hero';
 import PhotoTransform from '../components/home/PhotoTransform';
@@ -13,6 +13,15 @@ const pageVariants = {
 };
 
 const Home = () => {
+  useEffect(() => {
+    // Add smooth scroll behavior
+    document.documentElement.style.scrollBehavior = 'smooth';
+    
+    return () => {
+      document.documentElement.style.scrollBehavior = 'auto';
+    };
+  }, []);
+
   return (
     <motion.div
       variants={pageVariants}

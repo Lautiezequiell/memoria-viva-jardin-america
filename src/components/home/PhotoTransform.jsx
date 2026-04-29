@@ -120,6 +120,7 @@ const PhotoTransform = () => {
                 src={current.imageAfter}
                 alt={`${current.title} ${current.yearAfter}`}
                 className="w-full h-full object-cover"
+                loading="lazy"
               />
               <div className="absolute bottom-4 right-4 bg-black/70 text-white px-3 py-1 rounded-full text-sm font-medium">
                 {current.yearAfter}
@@ -136,6 +137,7 @@ const PhotoTransform = () => {
                 alt={`${current.title} ${current.yearBefore}`}
                 className="w-full h-full object-cover max-w-none"
                 style={{ width: '100%' }}
+                loading="lazy"
               />
               <div className="absolute bottom-4 left-4 bg-sepia-700 text-white px-3 py-1 rounded-full text-sm font-medium">
                 {current.yearBefore}
