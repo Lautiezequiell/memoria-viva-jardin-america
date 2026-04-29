@@ -9,7 +9,6 @@ const placesData = [
     address: 'Av. San Martín y Calle 9 de Julio',
     media: {
       photos: [
-        { image: 'https://lautiezequiell.github.io/memoria-viva-jardin-america/images/PlazaColon/Construcción Plaza colon.jpg' },
         { image: 'https://lautiezequiell.github.io/memoria-viva-jardin-america/images/ahora/Cartel.jpg' },
       ],
       videos: [],
