@@ -45,9 +45,10 @@ const MapPreview = () => {
                 <div className="card bg-white">
                   <div className="relative aspect-[16/10] overflow-hidden">
                     <img
-                      src={place.media.photos[0]}
+                      src={place.media.photos[0].image}
                       alt={place.name}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      loading="lazy"
                     />
                     <div className="absolute top-4 left-4">
                       <span className="px-3 py-1 bg-white/90 backdrop-blur-sm text-earth-800 rounded-full text-sm font-medium capitalize">
