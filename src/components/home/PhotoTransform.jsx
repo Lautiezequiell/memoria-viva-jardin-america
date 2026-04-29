@@ -6,7 +6,7 @@ const transformations = [
   {
     id: 1,
     title: 'Municipalidad',
-    yearBefore: '1940',
+    yearBefore: '1960',
     yearAfter: '2026',
     imageBefore: 'https://lautiezequiell.github.io/memoria-viva-jardin-america/images/antes-despues/Municipalidadantigua.jpg',
     imageAfter: 'https://lautiezequiell.github.io/memoria-viva-jardin-america/images/antes-despues/MunicipalidadAhora.jpg',
@@ -24,7 +24,7 @@ const transformations = [
   {
     id: 3,
     title: 'Iglesia',
-    yearBefore: '1950',
+    yearBefore: '1946',
     yearAfter: '2024',
     imageBefore: 'https://lautiezequiell.github.io/memoria-viva-jardin-america/images/antes-despues/IglesiaAntes.JPG',
     imageAfter: 'https://lautiezequiell.github.io/memoria-viva-jardin-america/images/antes-despues/IglesiaAhora.jpg',
@@ -120,6 +120,9 @@ const PhotoTransform = () => {
                 src={current.imageAfter}
                 alt={`${current.title} ${current.yearAfter}`}
                 className="w-full h-full object-cover"
+                style={{ 
+                  objectPosition: current.title === 'Iglesia' ? '42% 28%' : 'center'
+                }}
                 loading="lazy"
               />
               <div className="absolute bottom-4 right-4 bg-black/70 text-white px-3 py-1 rounded-full text-sm font-medium">

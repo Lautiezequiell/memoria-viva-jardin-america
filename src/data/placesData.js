@@ -41,7 +41,7 @@ const placesData = [
     id: 'place-003',
     name: 'Plaza Belgrano',
     category: 'plaza',
-    description: 'Espacio verde familiar del barrio sur',
+    description: 'Espacio verde familiar ',
     history: 'Plaza creada para dar esparcimiento a los vecinos del sector.',
     location: { lat: -27.050, lng: -55.225 },
     address: 'Calle Belgrano y Av. Mitre',
