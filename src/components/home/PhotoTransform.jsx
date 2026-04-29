@@ -121,7 +121,7 @@ const PhotoTransform = () => {
                 alt={`${current.title} ${current.yearAfter}`}
                 className="w-full h-full object-cover"
                 style={{ 
-                  objectPosition: current.title === 'Iglesia' ? '42% 28%' : 'center'
+                  objectPosition: current.title === 'Iglesia' ? '35% 20%' : 'center'
                 }}
                 loading="lazy"
               />
