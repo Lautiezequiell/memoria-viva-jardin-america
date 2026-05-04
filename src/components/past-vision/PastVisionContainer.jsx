@@ -12,6 +12,7 @@ const PastVisionContainer = () => {
   const currentImage = pastVisionData[selectedImage];
 
   const handleMouseMove = (e) => {
+    e.preventDefault();
     const rect = e.currentTarget.getBoundingClientRect();
     const x = ((e.clientX - rect.left) / rect.width) * 100;
     const y = ((e.clientY - rect.top) / rect.height) * 100;
@@ -19,6 +20,7 @@ const PastVisionContainer = () => {
   };
 
   const handleTouchMove = (e) => {
+    e.preventDefault();
     const rect = e.currentTarget.getBoundingClientRect();
     const touch = e.touches[0];
     const x = ((touch.clientX - rect.left) / rect.width) * 100;
@@ -102,18 +104,6 @@ const PastVisionContainer = () => {
             />
           </div>
 
-          {/* Image Info */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-            className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-8 rounded-b-2xl"
-          >
-            <h2 className="font-heading text-3xl font-bold mb-2 text-white">{currentImage.title}</h2>
-            <p className="text-gray-200 mb-1">{currentImage.year}</p>
-            <p className="text-gray-300">{currentImage.description}</p>
-          </motion.div>
-
           {/* Controls */}
           <div className="absolute top-4 right-4 flex gap-2">
             <button
@@ -124,6 +114,18 @@ const PastVisionContainer = () => {
               {isFullscreen ? <FaCompress /> : <FaExpand />}
             </button>
           </div>
+        </motion.div>
+
+        {/* Image Info - Below Image */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3 }}
+          className="max-w-4xl mx-auto mt-6 text-center"
+        >
+          <h2 className="font-heading text-3xl font-bold mb-2 text-gray-900">{currentImage.title}</h2>
+          <p className="text-gray-600 mb-1">{currentImage.year}</p>
+          <p className="text-gray-700">{currentImage.description}</p>
         </motion.div>
 
         {/* Navigation */}
