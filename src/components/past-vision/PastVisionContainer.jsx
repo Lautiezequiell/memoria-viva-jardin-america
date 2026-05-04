@@ -21,6 +21,7 @@ const PastVisionContainer = () => {
 
   const handleTouchMove = (e) => {
     e.preventDefault();
+    e.stopPropagation();
     const rect = e.currentTarget.getBoundingClientRect();
     const touch = e.touches[0];
     const x = ((touch.clientX - rect.left) / rect.width) * 100;
@@ -66,10 +67,11 @@ const PastVisionContainer = () => {
         >
           {/* Image Container */}
           <div
-            className={`relative overflow-hidden rounded-2xl ${isFullscreen ? 'h-full' : 'aspect-[4/3]'}`}
+            className={`relative overflow-hidden rounded-2xl ${isFullscreen ? 'h-full' : 'aspect-[4/3]'} touch-none`}
             onMouseMove={handleMouseMove}
             onTouchMove={handleTouchMove}
             onMouseLeave={() => setLensPosition({ x: 50, y: 50 })}
+            style={{ touchAction: 'none' }}
           >
             {/* Black and White Image */}
             <img
