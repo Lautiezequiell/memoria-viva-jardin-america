@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaArrowLeft, FaCode, FaHeart } from 'react-icons/fa';
+import { FaArrowLeft, FaCode, FaHeart, FaInstagram, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const pageVariants = {
@@ -69,9 +69,40 @@ const Creditos = () => {
             <p className="text-lg text-gray-700 font-medium mb-2">
               Lautaro Ezequiel Guerrero
             </p>
-            <p className="text-gray-600">
+            <p className="text-gray-600 mb-6">
               Desarrollador frontend especializado en crear experiencias digitales inmersivas para la preservación histórica.
             </p>
+            
+            {/* Social Links */}
+            <div className="flex justify-center gap-3">
+              <a
+                href="https://www.instagram.com/lautaro_guerrero_"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform shadow-lg"
+                aria-label="Instagram"
+              >
+                <FaInstagram />
+              </a>
+              <a
+                href="https://github.com/Lautiezequiell"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform shadow-lg"
+                aria-label="GitHub"
+              >
+                <FaGithub />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/lautaro-ezequiel-guerrero"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform shadow-lg"
+                aria-label="LinkedIn"
+              >
+                <FaLinkedin />
+              </a>
+            </div>
           </motion.div>
 
           {/* Mentor Card */}

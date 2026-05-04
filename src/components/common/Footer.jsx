@@ -19,7 +19,7 @@ const Footer = () => {
             </p>
             <div className="flex gap-4">
               <a
-                href="mailto:lauty9698@gmail.com"
+                href="mailto:memoriavivajardinamerica@gmail.com"
                 className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors"
                 aria-label="Email"
               >
@@ -63,11 +63,11 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="mailto:contacto@memoriavivaja.com"
+                  href="mailto:memoriavivajardinamerica@gmail.com"
                   className="flex items-center gap-3 text-primary-100 hover:text-white transition-colors"
                 >
                   <FaEnvelope />
-                  <span>contacto@memoriavivaja.com</span>
+                  <span>memoriavivajardinamerica@gmail.com</span>
                 </a>
               </li>
             </ul>

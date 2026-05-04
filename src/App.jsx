@@ -17,6 +17,7 @@ const Audiovisual = lazy(() => import('./pages/Audiovisual'));
 const Participa = lazy(() => import('./pages/Participa'));
 const Education = lazy(() => import('./pages/Education'));
 const Creditos = lazy(() => import('./pages/Creditos'));
+const PastVision = lazy(() => import('./pages/PastVision'));
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
                 <Route path="/participa" element={<Participa />} />
                 <Route path="/escuela" element={<Education />} />
                 <Route path="/creditos" element={<Creditos />} />
+                <Route path="/vea-a-traves-del-pasado" element={<PastVision />} />
               </Routes>
             </Suspense>
           </AnimatePresence>
