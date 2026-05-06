@@ -16,6 +16,15 @@ const TimelineContainer = () => {
 
   const currentDecade = timelineData[activeDecade];
 
+  // URLs específicas de Drive para cada década
+  const driveUrls = {
+    'decada-1946': 'https://drive.google.com/drive/folders/1D1qGk5rnJl6UXqW34f_bp4eA2TKfQW2z?usp=drive_link',
+    'decada-1960': 'https://drive.google.com/drive/folders/19GJitStlvHVqJJLFzCA2HNNzXlT0XXdZ?usp=drive_link',
+    'decada-1980': 'https://drive.google.com/drive/folders/1OCqdbGpGMT79aPvXk8pav0MMQqd0BSFv?usp=drive_link',
+    'decada-2000': 'https://drive.google.com/drive/folders/1AR-LBGfEbFbPiEKDaCEt7tcX9KW93W5G?usp=drive_link',
+    'decada-ahora': 'https://drive.google.com/drive/folders/1_GbtLDEm9fsxm3LUJYiJwvaUQnA57CXJ?usp=drive_link',
+  };
+
   const nextDecade = () => {
     if (activeDecade < timelineData.length - 1) {
       setActiveDecade(prev => prev + 1);
@@ -171,11 +180,10 @@ const TimelineContainer = () => {
                               className="inline-flex items-center gap-2 px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white font-medium rounded-lg transition-colors"
                               onClick={(e) => {
                                 e.preventDefault();
-                                // Aquí puedes agregar la URL que desees
-                                window.open('https://drive.google.com/drive/folders/1scNPellyi8Np_eE1K7IK8s17Q3rtDC80?usp=drive_link', '_blank');
+                                window.open(driveUrls[currentDecade.id], '_blank');
                               }}
                             >
-                              Ver más información
+                              Ver más Historia
                             </a>
                           </div>
                         </button>

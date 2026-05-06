@@ -51,7 +51,7 @@ const PastVisionContainer = () => {
           </Link>
           
           <h1 className="font-heading text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-primary-800 to-earth-800 bg-clip-text text-transparent">
-            Vea a través del pasado
+            Pasado a Color
           </h1>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto">
             Mueve el cursor sobre las imágenes en blanco y negro para descubrir cómo se ven hoy en color

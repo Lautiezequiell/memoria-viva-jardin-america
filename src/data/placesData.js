@@ -94,6 +94,44 @@ const placesData = [
     active: true,
     features: ['Canchas', 'Pileta', 'Gimnasio'],
   },
+  {
+    id: 'place-006',
+    name: 'Parroquia Cristo Redentor',
+    category: 'iglesia',
+    description: 'Templo católico principal del pueblo',
+    history: 'Iglesia construida por la comunidad como centro de fe y reunión.',
+    location: { lat: -27.046, lng: -55.228 },
+    address: 'Av. San Martín y Calle 25 de Mayo',
+    media: {
+      photos: [
+        { image: 'https://lautiezequiell.github.io/memoria-viva-jardin-america/images/anio1946/ComisionJA.JPG' },
+      ],
+      videos: [],
+      audios: [],
+    },
+    timeline: ['1950', '1970', '1990', '2010'],
+    active: true,
+    features: ['Templo', 'Campanario', 'Salón parroquial'],
+  },
+  {
+    id: 'place-007',
+    name: 'Municipalidad',
+    category: 'gobierno',
+    description: 'Casa de gobierno municipal',
+    history: 'Edificio que alberga la administración local y servicios públicos.',
+    location: { lat: -27.048, lng: -55.225 },
+    address: 'Av. San Martín y Calle 9 de Julio',
+    media: {
+      photos: [
+        { image: 'https://lautiezequiell.github.io/memoria-viva-jardin-america/images/anio1960/MunicipalidadAntigua.jpg' },
+      ],
+      videos: [],
+      audios: [],
+    },
+    timeline: ['1960', '1980', '2000', '2020'],
+    active: true,
+    features: ['Administración', 'Salón de actos', 'Archivo municipal'],
+  },
 ];
 
 export const categories = [

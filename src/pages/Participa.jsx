@@ -40,7 +40,7 @@ const Participa = () => {
             transition={{ delay: 0.3 }}
             className="text-lg text-gray-700 mb-8"
           >
-            ¿Tenés fotos, historias o documentos históricos de Jardín América? ¡Queremos conocerlos!
+            ¿Tenés fotos, historias o documentos históricos de Jardín América? ¡Compartilos con nosotros y ayudá a construir la memoria colectiva!
           </motion.p>
           
           <motion.div
@@ -51,14 +51,16 @@ const Participa = () => {
           >
             <FaEnvelope className="text-6xl text-primary-600 mx-auto mb-6" />
             <p className="text-gray-700 mb-6">
-              Envíanos tu material histórico y ayudanos a construir la memoria colectiva de nuestra ciudad.
+              Completá el formulario con tus fotos, historias o documentos. Tu aporte es fundamental para preservar nuestra historia.
             </p>
             <a
-              href="mailto:memoriavivajardinamerica@gmail.com"
+              href="https://forms.gle/DZuCMCuUuQNZpzZT7"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-primary-600 hover:bg-primary-700 text-white font-medium px-6 py-3 rounded-lg transition-colors"
             >
               <FaEnvelope />
-              Enviar por correo
+              Completar formulario
             </a>
           </motion.div>
         </div>

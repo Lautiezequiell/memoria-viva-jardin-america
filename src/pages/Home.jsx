@@ -5,6 +5,8 @@ import PhotoTransform from '../components/home/PhotoTransform';
 import TimelinePreview from '../components/home/TimelinePreview';
 import MapPreview from '../components/home/MapPreview';
 import StoriesPreview from '../components/home/StoriesPreview';
+import PastVisionPreview from '../components/home/PastVisionPreview';
+import PhototecaPreview from '../components/home/PhototecaPreview';
 
 const pageVariants = {
   initial: { opacity: 0 },
@@ -34,6 +36,8 @@ const Home = () => {
       <PhotoTransform />
       <TimelinePreview />
       <MapPreview />
+      <PastVisionPreview />
+      <PhototecaPreview />
       <StoriesPreview />
     </motion.div>
   );
