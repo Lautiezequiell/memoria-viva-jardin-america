@@ -1,33 +1,33 @@
 {
   "files": {
-    "main.css": "/memoria-viva-jardin-america/static/css/main.3ad7ecf6.css",
-    "main.js": "/memoria-viva-jardin-america/static/js/main.647c84da.js",
-    "static/js/24.4f1fdf69.chunk.js": "/memoria-viva-jardin-america/static/js/24.4f1fdf69.chunk.js",
-    "static/js/459.18d150ad.chunk.js": "/memoria-viva-jardin-america/static/js/459.18d150ad.chunk.js",
+    "main.css": "/memoria-viva-jardin-america/static/css/main.f2e6b38e.css",
+    "main.js": "/memoria-viva-jardin-america/static/js/main.29de9162.js",
+    "static/js/205.aca0a978.chunk.js": "/memoria-viva-jardin-america/static/js/205.aca0a978.chunk.js",
+    "static/js/459.8fd5f955.chunk.js": "/memoria-viva-jardin-america/static/js/459.8fd5f955.chunk.js",
     "static/js/825.b8dbf5d4.chunk.js": "/memoria-viva-jardin-america/static/js/825.b8dbf5d4.chunk.js",
     "static/js/341.bc8c5fef.chunk.js": "/memoria-viva-jardin-america/static/js/341.bc8c5fef.chunk.js",
     "static/js/742.f8ab65c1.chunk.js": "/memoria-viva-jardin-america/static/js/742.f8ab65c1.chunk.js",
     "static/js/207.a904c685.chunk.js": "/memoria-viva-jardin-america/static/js/207.a904c685.chunk.js",
-    "static/js/552.23d7896b.chunk.js": "/memoria-viva-jardin-america/static/js/552.23d7896b.chunk.js",
+    "static/js/552.102bf91b.chunk.js": "/memoria-viva-jardin-america/static/js/552.102bf91b.chunk.js",
     "static/js/111.b69124d8.chunk.js": "/memoria-viva-jardin-america/static/js/111.b69124d8.chunk.js",
-    "static/js/488.e8f579a8.chunk.js": "/memoria-viva-jardin-america/static/js/488.e8f579a8.chunk.js",
-    "static/js/578.4a94a5a2.chunk.js": "/memoria-viva-jardin-america/static/js/578.4a94a5a2.chunk.js",
+    "static/js/488.74004711.chunk.js": "/memoria-viva-jardin-america/static/js/488.74004711.chunk.js",
+    "static/js/856.267806a4.chunk.js": "/memoria-viva-jardin-america/static/js/856.267806a4.chunk.js",
     "index.html": "/memoria-viva-jardin-america/index.html",
-    "main.3ad7ecf6.css.map": "/memoria-viva-jardin-america/static/css/main.3ad7ecf6.css.map",
-    "main.647c84da.js.map": "/memoria-viva-jardin-america/static/js/main.647c84da.js.map",
-    "24.4f1fdf69.chunk.js.map": "/memoria-viva-jardin-america/static/js/24.4f1fdf69.chunk.js.map",
-    "459.18d150ad.chunk.js.map": "/memoria-viva-jardin-america/static/js/459.18d150ad.chunk.js.map",
+    "main.f2e6b38e.css.map": "/memoria-viva-jardin-america/static/css/main.f2e6b38e.css.map",
+    "main.29de9162.js.map": "/memoria-viva-jardin-america/static/js/main.29de9162.js.map",
+    "205.aca0a978.chunk.js.map": "/memoria-viva-jardin-america/static/js/205.aca0a978.chunk.js.map",
+    "459.8fd5f955.chunk.js.map": "/memoria-viva-jardin-america/static/js/459.8fd5f955.chunk.js.map",
     "825.b8dbf5d4.chunk.js.map": "/memoria-viva-jardin-america/static/js/825.b8dbf5d4.chunk.js.map",
     "341.bc8c5fef.chunk.js.map": "/memoria-viva-jardin-america/static/js/341.bc8c5fef.chunk.js.map",
     "742.f8ab65c1.chunk.js.map": "/memoria-viva-jardin-america/static/js/742.f8ab65c1.chunk.js.map",
     "207.a904c685.chunk.js.map": "/memoria-viva-jardin-america/static/js/207.a904c685.chunk.js.map",
-    "552.23d7896b.chunk.js.map": "/memoria-viva-jardin-america/static/js/552.23d7896b.chunk.js.map",
+    "552.102bf91b.chunk.js.map": "/memoria-viva-jardin-america/static/js/552.102bf91b.chunk.js.map",
     "111.b69124d8.chunk.js.map": "/memoria-viva-jardin-america/static/js/111.b69124d8.chunk.js.map",
-    "488.e8f579a8.chunk.js.map": "/memoria-viva-jardin-america/static/js/488.e8f579a8.chunk.js.map",
-    "578.4a94a5a2.chunk.js.map": "/memoria-viva-jardin-america/static/js/578.4a94a5a2.chunk.js.map"
+    "488.74004711.chunk.js.map": "/memoria-viva-jardin-america/static/js/488.74004711.chunk.js.map",
+    "856.267806a4.chunk.js.map": "/memoria-viva-jardin-america/static/js/856.267806a4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3ad7ecf6.css",
-    "static/js/main.647c84da.js"
+    "static/css/main.f2e6b38e.css",
+    "static/js/main.29de9162.js"
   ]
 }
