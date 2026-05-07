@@ -176,7 +176,7 @@ const timelineData = [
     events: [
       {
         id: 'evt-2024-001',
-        year: 2026,
+        year: 2024,
         title: 'Edificio Municipal',
         description: 'Edificio Municipal de Jardín América Actual.',
         type: 'photo',
@@ -187,7 +187,7 @@ const timelineData = [
       },
       {
         id: 'evt-2024-002',
-        year: 2026,
+        year: 2023,
         title: 'Parque Tecnológico Zona Centro Paraná',
         description: 'La municipalidad y el Parque Tecnológico Zona Centro Paraná trabajan para potenciar el desarrollo tecnológico y sociocultural de la ciudad.',
         type: 'photo',
@@ -198,7 +198,7 @@ const timelineData = [
       },
       {
         id: 'evt-2024-003',
-        year: 2026,
+        year: 2022,
         title: 'Plaza Colón Actual',
         description: 'Seguimos construyendo y mejorando nuestra ciudad conforme pasa el tiempo.',
         type: 'photo',
