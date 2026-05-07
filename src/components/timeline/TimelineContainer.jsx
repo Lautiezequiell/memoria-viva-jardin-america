@@ -121,7 +121,7 @@ const TimelineContainer = () => {
               {/* Events */}
               <div className="space-y-8">
                 {currentDecade.events.map((event, index) => {
-                  const TypeIcon = typeIcons[event.type];
+                  const TypeIcon = typeIcons[event.type] || FaImage;
                   const isEven = index % 2 === 0;
 
                   return (
