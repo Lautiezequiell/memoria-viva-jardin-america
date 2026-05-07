@@ -4,8 +4,15 @@ import { motion } from 'framer-motion';
 import { FaArrowRight, FaCamera, FaImages } from 'react-icons/fa';
 
 const PhototecaPreview = () => {
-  // Usar la URL proporcionada para las 6 imágenes de preview
-  const previewImages = Array(6).fill('https://lautiezequiell.github.io/memoria-viva-jardin-america/images/PlazaColon/plaza 000.jpg');
+  // Rutas individuales para cada imagen de preview - puedes personalizar cada una
+  const previewImages = [
+    'https://lautiezequiell.github.io/memoria-viva-jardin-america/images/anio1946/1erEdificioMunicipal.jpg', // Imagen 1
+    'https://lautiezequiell.github.io/memoria-viva-jardin-america/images/anio1960/ConstruccionPlazaColon.jpg', // Imagen 2
+    'https://lautiezequiell.github.io/memoria-viva-jardin-america/images/anio1980/contruscción-Polideportivo-1er.jpg', // Imagen 3
+    'https://lautiezequiell.github.io/memoria-viva-jardin-america/images/anio2000/Aerea02.jpg', // Imagen 4
+    'https://lautiezequiell.github.io/memoria-viva-jardin-america/images/anio1980/TerminaldeOmnibus.jpg', // Imagen 5
+    'https://lautiezequiell.github.io/memoria-viva-jardin-america/images/anio1946/ComisionJA.JPG', // Imagen 6
+  ];
 
   return (
     <section className="py-20 bg-stone-100">
@@ -91,11 +98,11 @@ const PhototecaPreview = () => {
         >
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <div>
-              <div className="text-3xl font-bold text-primary-600 mb-2">1000+</div>
+              <div className="text-3xl font-bold text-primary-600 mb-2">100+</div>
               <p className="text-gray-600">Fotografías históricas</p>
             </div>
             <div>
-              <div className="text-3xl font-bold text-earth-600 mb-2">1940-2024</div>
+              <div className="text-3xl font-bold text-earth-600 mb-2">1940-2026</div>
               <p className="text-gray-600">Años documentados</p>
             </div>
             <div>
