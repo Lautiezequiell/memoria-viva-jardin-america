@@ -95,14 +95,14 @@ const TimelineContainer = () => {
             <div className="relative aspect-[21/9] rounded-2xl overflow-hidden mb-12">
               <img
                 src={currentDecade.image}
-                alt={`${currentDecade.title} - Imagen histórica de la década de ${currentDecade.decade}s`}
+                alt={`${currentDecade.title} - Imagen histórica de ${currentDecade.decade === 'Ahora' ? 'nuestro tiempo' : `la década de ${currentDecade.decade}s`}`}
                 className="w-full h-full object-cover"
                 loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12">
                 <span className="text-6xl md:text-8xl font-heading font-bold text-white/20">
-                  {currentDecade.decade}s
+                  {currentDecade.decade === 'Ahora' ? currentDecade.decade : `${currentDecade.decade}s`}
                 </span>
                 <h2 className="text-3xl md:text-4xl font-heading font-bold text-white -mt-8 mb-2">
                   {currentDecade.title}
