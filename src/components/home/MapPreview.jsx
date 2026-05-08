@@ -62,7 +62,7 @@ const MapPreview = () => {
               className="flex transition-transform duration-500 ease-in-out"
               style={{ transform: `translateX(-${currentIndex * 100}%)` }}
             >
-              {featuredPlaces.map((place, index) => (
+              {placesData.map((place, _index) => (
                 <div key={place.id} className="w-full flex-shrink-0 px-2">
                   <Link to="/mapa" className="group block">
                     <div className="card bg-white h-full">

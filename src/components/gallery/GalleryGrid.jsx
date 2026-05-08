@@ -216,8 +216,8 @@ const GalleryGrid = () => {
                   exit={{ opacity: 0, scale: 0.9 }}
                   transition={{ delay: index * 0.05 }}
                   onClick={() => {
-                    // Redirigir a página externa (ej: Google Drive)
-                    window.open('https://drive.google.com/your-link', '_blank');
+                    // Redirigir a Google Drive con las fotos
+                    window.open('https://drive.google.com/drive/folders/1scNPellyi8Np_eE1K7IK8s17Q3rtDC80', '_blank');
                   }}
                   className="group relative aspect-square rounded-xl overflow-hidden cursor-pointer bg-gray-100"
                 >

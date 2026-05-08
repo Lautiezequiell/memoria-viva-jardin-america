@@ -1,11 +1,47 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaArrowRight, FaEye } from 'react-icons/fa';
 import pastVisionData from '../../data/pastVisionData';
 
 const PastVisionPreview = () => {
-  const previewImage = pastVisionData[0]; // Mostrar la primera imagen como preview
+  const [selectedImage, setSelectedImage] = useState(0);
+  const [lensPosition, setLensPosition] = useState({ x: 50, y: 50 });
+  const [showInstructions, setShowInstructions] = useState(true);
+  const previewImage = pastVisionData[selectedImage];
+
+  const handleMouseMove = (e) => {
+    e.preventDefault();
+    e.stopPropagation(); // Prevenir que afecte el scroll general
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = ((e.clientX - rect.left) / rect.width) * 100;
+    const y = ((e.clientY - rect.top) / rect.height) * 100;
+    setLensPosition({ x: Math.min(Math.max(x, 0), 100), y: Math.min(Math.max(y, 0), 100) });
+    if (showInstructions) setShowInstructions(false); // Ocultar instrucciones al mover la lupa
+  };
+
+  const handleTouchMove = (e) => {
+    e.preventDefault();
+    e.stopPropagation(); // Prevenir que afecte el scroll general
+    const rect = e.currentTarget.getBoundingClientRect();
+    const touch = e.touches[0];
+    const x = ((touch.clientX - rect.left) / rect.width) * 100;
+    const y = ((touch.clientY - rect.top) / rect.height) * 100;
+    setLensPosition({ x: Math.min(Math.max(x, 0), 100), y: Math.min(Math.max(y, 0), 100) });
+    if (showInstructions) setShowInstructions(false); // Ocultar instrucciones al mover la lupa
+  };
+
+  const nextImage = () => {
+    setSelectedImage((prev) => (prev + 1) % pastVisionData.length);
+    setLensPosition({ x: 50, y: 50 });
+    setShowInstructions(true); // Mostrar instrucciones al cambiar de imagen
+  };
+
+  const prevImage = () => {
+    setSelectedImage((prev) => (prev - 1 + pastVisionData.length) % pastVisionData.length);
+    setLensPosition({ x: 50, y: 50 });
+    setShowInstructions(true); // Mostrar instrucciones al cambiar de imagen
+  };
 
   return (
     <section className="py-20 bg-gradient-to-br from-primary-50 to-earth-50">
@@ -42,37 +78,102 @@ const PastVisionPreview = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="max-w-4xl mx-auto"
         >
-          <div className="relative rounded-2xl overflow-hidden shadow-2xl group">
-            {/* Preview Image */}
-            <div className="relative aspect-[4/3] overflow-hidden">
+          <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+            {/* Interactive Image with Lens */}
+            <div
+              className="relative aspect-[4/3] overflow-hidden touch-none"
+              onMouseMove={handleMouseMove}
+              onMouseLeave={() => setLensPosition({ x: 50, y: 50 })}
+              onTouchMove={handleTouchMove}
+              onTouchEnd={() => setLensPosition({ x: 50, y: 50 })}
+              style={{ touchAction: 'none' }}
+            >
+              {/* Black and White Image */}
               <img
                 src={previewImage.blackWhiteImage}
-                alt={`${previewImage.title} - Vista previa`}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                alt={`${previewImage.title} - Blanco y negro`}
+                className="w-full h-full object-cover"
                 loading="lazy"
               />
               
-              {/* Overlay gradient */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              
-              {/* Preview hint */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <FaEye className="text-4xl mx-auto mb-2" />
-                  <p className="text-lg font-medium">Mueva el cursor para revelar el color</p>
-                </div>
+              {/* Color Image with Lens Effect */}
+              <div className="absolute inset-0">
+                <img
+                  src={previewImage.colorImage}
+                  alt={`${previewImage.title} - Color`}
+                  className="w-full h-full object-cover"
+                  style={{
+                    clipPath: `circle(60px at ${lensPosition.x}% ${lensPosition.y}%)`,
+                  }}
+                />
               </div>
+
+              {/* Lens Border */}
+              <div
+                className="absolute pointer-events-none border-4 border-white rounded-full shadow-2xl"
+                style={{
+                  width: '120px',
+                  height: '120px',
+                  left: `${lensPosition.x}%`,
+                  top: `${lensPosition.y}%`,
+                  transform: 'translate(-50%, -50%)',
+                  boxShadow: '0 0 0 2px rgba(255,255,255,0.3), 0 0 20px rgba(0,0,0,0.5)',
+                }}
+              />
+
+              {/* Instructions overlay */}
+              {showInstructions && (
+                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                  <div className="text-center text-white bg-black/50 backdrop-blur-sm rounded-xl p-4 max-w-sm mx-4 opacity-75 transition-opacity duration-300">
+                    <FaEye className="text-3xl mx-auto mb-2" />
+                    <p className="text-sm font-medium">Mueva el cursor para revelar el color</p>
+                  </div>
+                </div>
+              )}
             </div>
 
-            {/* Image Info */}
-            <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent">
-              <h3 className="text-white font-heading text-2xl font-bold mb-1">
+            {/* Image Info - Outside the interactive area */}
+            <div className="p-6 bg-white">
+              <h3 className="font-heading text-2xl font-bold mb-1 text-gray-900">
                 {previewImage.title}
               </h3>
-              <p className="text-white/80 text-sm">
+              <p className="text-gray-600 text-sm mb-2">
                 {previewImage.year} • {previewImage.description}
               </p>
             </div>
+          </div>
+
+          {/* Navigation Controls */}
+          <div className="flex justify-between items-center mt-6">
+            <button
+              onClick={prevImage}
+              className="px-4 py-2 bg-primary-100 text-primary-700 rounded-lg hover:bg-primary-200 transition-colors flex items-center gap-2 font-medium text-sm"
+            >
+              ← Anterior
+            </button>
+            
+            <div className="flex gap-2">
+              {pastVisionData.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => {
+                    setSelectedImage(index);
+                    setLensPosition({ x: 50, y: 50 });
+                    setShowInstructions(true); // Mostrar instrucciones al seleccionar imagen
+                  }}
+                  className={`w-2 h-2 rounded-full transition-all ${
+                    index === selectedImage ? 'bg-primary-700 w-6' : 'bg-primary-300'
+                  }`}
+                />
+              ))}
+            </div>
+            
+            <button
+              onClick={nextImage}
+              className="px-4 py-2 bg-primary-100 text-primary-700 rounded-lg hover:bg-primary-200 transition-colors flex items-center gap-2 font-medium text-sm"
+            >
+              Siguiente →
+            </button>
           </div>
         </motion.div>
 

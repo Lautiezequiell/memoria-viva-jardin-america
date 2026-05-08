@@ -173,7 +173,7 @@ const Creditos = () => {
             {/* Social Links */}
             <div className="flex justify-center gap-3">
               <a
-                href="https://www.instagram.com/lautaro_guerrero_"
+                href="https://www.instagram.com/lautiezequiell"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform shadow-lg"
@@ -191,7 +191,7 @@ const Creditos = () => {
                 <FaGithub />
               </a>
               <a
-                href="https://www.linkedin.com/in/lautaro-ezequiel-guerrero"
+                href="https://www.linkedin.com/in/lautaro-guerrero-94a11b409"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform shadow-lg"

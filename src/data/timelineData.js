@@ -61,7 +61,7 @@ const timelineData = [
       },
       {
         id: 'evt-1965-002',
-        year: 1966,
+        year: 1951,
         title: 'Escuela 284',
         description: 'Inicios de nuestra primera institución educativa.',
         type: 'foto',
@@ -103,7 +103,7 @@ const timelineData = [
       },
       {
         id: 'evt-1985-002',
-        year: 1986,
+        year: 1995,
         title: 'Incio del Barrio Prosol',
         description: 'Inicio de la construcción del barrio Prosol.',
         type: 'photo',
@@ -134,7 +134,7 @@ const timelineData = [
     events: [
       {
         id: 'evt-2005-001',
-        year: 1999,
+        year: 2001,
         title: 'Construcción del Polideportivo',
         description: 'Nuevo centro deportivo para la comunidad.',
         type: 'photo',
@@ -176,7 +176,7 @@ const timelineData = [
     events: [
       {
         id: 'evt-2024-001',
-        year: 2026,
+        year: 2017,
         title: 'Edificio Municipal',
         description: 'Edificio Municipal de Jardín América Actual.',
         type: 'photo',

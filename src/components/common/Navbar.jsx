@@ -10,7 +10,7 @@ const navLinks = [
   { path: '/fototeca', label: 'Fototeca' },
   { path: '/historias', label: 'Historias' },
   { path: '/audiovisual', label: 'Audiovisual' },
-  { path: '/vea-a-traves-del-pasado', label: 'Vea a través del pasado' },
+  { path: '/vea-a-traves-del-pasado', label: 'Pasado a Color' },
   { path: '/participa', label: 'Participá' },
   { path: '/escuela', label: 'Escuela' },
 ];

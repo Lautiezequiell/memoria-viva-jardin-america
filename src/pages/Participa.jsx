@@ -54,7 +54,7 @@ const Participa = () => {
               Completá el formulario con tus fotos, historias o documentos. Tu aporte es fundamental para preservar nuestra historia.
             </p>
             <a
-              href="https://forms.gle/DZuCMCuUuQNZpzZT7"
+              href="https://forms.gle/wdnfhXYAmiAAGFmp7"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-primary-600 hover:bg-primary-700 text-white font-medium px-6 py-3 rounded-lg transition-colors"
