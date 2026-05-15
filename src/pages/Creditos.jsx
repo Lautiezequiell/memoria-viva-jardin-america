@@ -144,6 +144,7 @@ const Creditos = () => {
                   <p className="font-medium mb-2">Contribuciones especiales:</p>
                   <ul className="list-disc list-inside space-y-1 text-sm">
                     <li>Dir./Docente Moraiz Graciela</li>
+                    <li>Prof. de Historia Cantero Oscar Daniel</li>
                   </ul>
                 </div>
               </div>
