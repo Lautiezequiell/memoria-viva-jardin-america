@@ -130,7 +130,7 @@ const PhototecaPreview = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/participa"
-                className="inline-flex items-center justify-center gap-2 bg-primary-600 hover:bg-primary-700 text-white font-medium px-6 py-3 rounded-lg transition-colors"
+                className="inline-flex items-center justify-center gap-2 bg-primary-700 hover:bg-primary-900 text-white font-medium px-6 py-3 rounded-lg transition-colors"
               >
                 <FaCamera />
                 Compartir fotos

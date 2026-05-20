@@ -57,7 +57,7 @@ const Participa = () => {
               href="https://forms.gle/wdnfhXYAmiAAGFmp7"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-primary-600 hover:bg-primary-700 text-white font-medium px-6 py-3 rounded-lg transition-colors"
+              className="inline-flex items-center gap-2 bg-primary-700 hover:bg-primary-900 text-white font-medium px-6 py-3 rounded-lg transition-colors"
             >
               <FaEnvelope />
               Completar formulario
